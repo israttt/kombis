@@ -1,0 +1,1656 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Go-Clean App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
+  </head>
+  <body>
+    <div class="phone" id="app">
+      <!-- ══ SCREEN 1: HOME ══ -->
+      <div class="screen active" id="s-home">
+        <div class="hero">
+          <div class="hero-top">
+            <div>
+              <div class="greeting">Selamat pagi,</div>
+              <div class="user-name">Budi Santoso 👋</div>
+            </div>
+            <div style="display: flex; gap: 8px; align-items: center">
+              <div class="icon-circle">
+                <i class="ti ti-bell" style="color: #fff; font-size: 18px"></i>
+              </div>
+              <div class="avatar-sm">BS</div>
+            </div>
+          </div>
+          <div class="search-bar">
+            <i
+              class="ti ti-search"
+              style="color: var(--blue); font-size: 18px"
+            ></i>
+            <span>Cari layanan cleaning...</span>
+          </div>
+        </div>
+
+        <div class="card-promo" onclick="goTo('s-service')">
+          <div class="badge">🔥 PROMO SPESIAL</div>
+          <div style="font-size: 15px; font-weight: 800; margin-bottom: 2px">
+            Cuci Sofa + Karpet
+          </div>
+          <div style="font-size: 11px; opacity: 0.8">
+            Hemat hingga 30% minggu ini
+          </div>
+          <div style="font-size: 22px; font-weight: 900; margin-top: 6px">
+            Rp 150.000
+          </div>
+        </div>
+
+        <div class="sec-title">
+          Pilih Layanan <span class="see-all">Lihat semua</span>
+        </div>
+        <div class="services-grid">
+          <div class="svc-item" onclick="goTo('s-service')">
+            <div class="svc-icon active"><i class="ti ti-home"></i></div>
+            <div class="svc-name">Rumah</div>
+          </div>
+          <div class="svc-item" onclick="goTo('s-service')">
+            <div class="svc-icon"><i class="ti ti-sofa"></i></div>
+            <div class="svc-name">Sofa</div>
+          </div>
+          <div class="svc-item" onclick="goTo('s-service')">
+            <div class="svc-icon"><i class="ti ti-building"></i></div>
+            <div class="svc-name">Kantor</div>
+          </div>
+          <div class="svc-item" onclick="goTo('s-service')">
+            <div class="svc-icon"><i class="ti ti-droplet"></i></div>
+            <div class="svc-name">AC</div>
+          </div>
+          <div class="svc-item" onclick="goTo('s-service')">
+            <div class="svc-icon"><i class="ti ti-car"></i></div>
+            <div class="svc-name">Kendaraan</div>
+          </div>
+          <div class="svc-item" onclick="goTo('s-service')">
+            <div class="svc-icon"><i class="ti ti-tool"></i></div>
+            <div class="svc-name">Deep Clean</div>
+          </div>
+          <div class="svc-item" onclick="goTo('s-service')">
+            <div class="svc-icon"><i class="ti ti-star"></i></div>
+            <div class="svc-name">Premium</div>
+          </div>
+          <div class="svc-item" onclick="goTo('s-service')">
+            <div class="svc-icon"><i class="ti ti-dots"></i></div>
+            <div class="svc-name">Lainnya</div>
+          </div>
+        </div>
+
+        <div class="sec-title">
+          Penawaran <span class="see-all">Semua promo</span>
+        </div>
+        <div class="mini-promos">
+          <div class="mini-card" onclick="goTo('s-service')">
+            <div class="badge badge-green">NEW</div>
+            <div class="mini-card-title">Cuci Karpet</div>
+            <div class="mini-card-sub">Mulai Rp 80.000</div>
+            <div class="mini-card-emoji">🏠</div>
+          </div>
+          <div class="mini-card" onclick="goTo('s-service')">
+            <div class="badge">HOT</div>
+            <div class="mini-card-title">Bersih Kantor</div>
+            <div class="mini-card-sub">Mulai Rp 200.000</div>
+            <div class="mini-card-emoji">🏢</div>
+          </div>
+          <div class="mini-card" onclick="goTo('s-service')">
+            <div class="badge badge-green">ECO</div>
+            <div class="mini-card-title">Cuci AC</div>
+            <div class="mini-card-sub">Mulai Rp 120.000</div>
+            <div class="mini-card-emoji">❄️</div>
+          </div>
+        </div>
+
+        <nav class="nav-bar">
+          <div class="nav-item active" onclick="goTo('s-home')">
+            <i class="ti ti-home-2"></i><span>Beranda</span>
+          </div>
+          <div class="nav-item" onclick="goTo('s-orders')">
+            <i class="ti ti-clipboard-list"></i><span>Pesanan</span>
+          </div>
+          <div class="nav-center">
+            <div class="nav-fab" onclick="goTo('s-service')">
+              <i class="ti ti-plus"></i>
+            </div>
+          </div>
+          <div class="nav-item" onclick="goTo('s-chat')">
+            <i class="ti ti-message"></i><span>Chat</span>
+          </div>
+          <div class="nav-item" onclick="goTo('s-profile')">
+            <i class="ti ti-user"></i><span>Profil</span>
+          </div>
+        </nav>
+      </div>
+
+      <!-- ══ SCREEN 2: PILIH LAYANAN ══ -->
+      <div class="screen" id="s-service">
+        <div class="s-header">
+          <div class="back-btn" onclick="goBack()">
+            <i
+              class="ti ti-arrow-left"
+              style="color: #fff; font-size: 18px"
+            ></i>
+          </div>
+          <div>
+            <div class="s-header-title">Pilih Layanan</div>
+            <div class="s-header-sub">Tentukan kebutuhan Anda</div>
+          </div>
+        </div>
+        <div class="svc-cards">
+          <div class="svc-card selected" onclick="selectService(this, 0)">
+            <div class="svc-icon-big"><i class="ti ti-home"></i></div>
+            <div class="svc-info">
+              <div class="svc-info-name">Bersih Rumah Regular</div>
+              <div class="svc-info-desc">Sapu, pel, lap permukaan</div>
+              <div class="svc-info-price">Rp 150.000/kunjungan</div>
+            </div>
+            <div class="check-circle"><i class="ti ti-check"></i></div>
+          </div>
+          <div class="svc-card" onclick="selectService(this, 1)">
+            <div class="svc-icon-big"><i class="ti ti-sparkles"></i></div>
+            <div class="svc-info">
+              <div class="svc-info-name">Deep Cleaning</div>
+              <div class="svc-info-desc">Pembersihan menyeluruh</div>
+              <div class="svc-info-price">Rp 350.000/kunjungan</div>
+            </div>
+            <div class="check-empty"></div>
+          </div>
+          <div class="svc-card" onclick="selectService(this, 2)">
+            <div class="svc-icon-big"><i class="ti ti-sofa"></i></div>
+            <div class="svc-info">
+              <div class="svc-info-name">Cuci Sofa & Karpet</div>
+              <div class="svc-info-desc">Pembersihan kain & busa</div>
+              <div class="svc-info-price">Rp 200.000/item</div>
+            </div>
+            <div class="check-empty"></div>
+          </div>
+        </div>
+        <div style="padding: 0 14px 14px">
+          <div
+            style="
+              font-size: 15px;
+              font-weight: 800;
+              color: var(--gray-700);
+              padding: 8px 0;
+            "
+          >
+            Lokasi Anda
+          </div>
+          <div class="loc-box">
+            <i class="ti ti-map-pin"></i>
+            <div>
+              <div class="loc-addr">Jl. Malioboro No. 45</div>
+              <div class="loc-detail">Yogyakarta, DIY 55271</div>
+            </div>
+            <div class="change-btn">Ubah</div>
+          </div>
+        </div>
+        <button
+          class="btn-primary"
+          style="margin-bottom: 16px"
+          onclick="goTo('s-schedule')"
+        >
+          Lanjut <i class="ti ti-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- ══ SCREEN 3: JADWAL ══ -->
+      <div class="screen" id="s-schedule">
+        <div class="s-header">
+          <div class="back-btn" onclick="goBack()">
+            <i
+              class="ti ti-arrow-left"
+              style="color: #fff; font-size: 18px"
+            ></i>
+          </div>
+          <div>
+            <div class="s-header-title">Jadwal & Durasi</div>
+            <div class="s-header-sub">Pilih waktu yang sesuai</div>
+          </div>
+        </div>
+        <div class="cal-header">
+          <div class="cal-month">Juni 2025</div>
+          <div class="cal-nav">
+            <button>
+              <i
+                class="ti ti-chevron-left"
+                style="font-size: 16px; color: var(--gray-700)"
+              ></i>
+            </button>
+            <button>
+              <i
+                class="ti ti-chevron-right"
+                style="font-size: 16px; color: var(--gray-700)"
+              ></i>
+            </button>
+          </div>
+        </div>
+        <div class="cal-days-hdr">
+          <div class="cal-day-lbl">Min</div>
+          <div class="cal-day-lbl">Sen</div>
+          <div class="cal-day-lbl">Sel</div>
+          <div class="cal-day-lbl">Rab</div>
+          <div class="cal-day-lbl">Kam</div>
+          <div class="cal-day-lbl">Jum</div>
+          <div class="cal-day-lbl">Sab</div>
+        </div>
+        <div class="cal-grid" id="cal-grid"></div>
+
+        <div class="time-section">
+          <div class="time-label">Pilih Jam</div>
+          <div class="time-slots">
+            <div class="time-slot unavailable">07:00</div>
+            <div class="time-slot" onclick="selectTime(this)">09:00</div>
+            <div class="time-slot selected" onclick="selectTime(this)">
+              10:00
+            </div>
+            <div class="time-slot" onclick="selectTime(this)">13:00</div>
+            <div class="time-slot" onclick="selectTime(this)">15:00</div>
+            <div class="time-slot unavailable">17:00</div>
+          </div>
+        </div>
+        <div class="dur-row">
+          <div class="dur-label">Durasi Layanan</div>
+          <div class="dur-options">
+            <div class="dur-chip" onclick="selectDur(this, 0)">2 Jam</div>
+            <div class="dur-chip selected" onclick="selectDur(this, 1)">
+              3 Jam
+            </div>
+            <div class="dur-chip" onclick="selectDur(this, 2)">4 Jam</div>
+            <div class="dur-chip" onclick="selectDur(this, 3)">Seharian</div>
+          </div>
+        </div>
+        <button
+          class="btn-primary"
+          style="margin-bottom: 16px"
+          onclick="goTo('s-estimate')"
+        >
+          Lanjut <i class="ti ti-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- ══ SCREEN 4: ESTIMASI ══ -->
+      <div class="screen" id="s-estimate">
+        <div class="s-header">
+          <div class="back-btn" onclick="goBack()">
+            <i
+              class="ti ti-arrow-left"
+              style="color: #fff; font-size: 18px"
+            ></i>
+          </div>
+          <div>
+            <div class="s-header-title">Estimasi Biaya</div>
+            <div class="s-header-sub">Transparan sebelum lanjut</div>
+          </div>
+        </div>
+        <div class="est-content">
+          <div class="est-card">
+            <div class="est-svc-name" id="est-svc-name">
+              Bersih Rumah Regular • 3 Jam
+            </div>
+            <div class="est-total-lbl">Total Estimasi</div>
+            <div class="est-total" id="est-total">Rp 195.000</div>
+            <div class="est-breakdown">
+              <div class="est-row">
+                <span id="est-row-svc">Bersih Rumah (3 jam)</span
+                ><span id="est-row-base">Rp 225.000</span>
+              </div>
+              <div class="est-row">
+                <span>Biaya Platform</span><span>Rp 15.000</span>
+              </div>
+              <div class="est-row disc">
+                <span>Diskon Promo 🎉</span
+                ><span id="est-row-disc">- Rp 45.000</span>
+              </div>
+              <div class="est-row bold">
+                <span>Total Bayar</span
+                ><span id="est-row-total">Rp 195.000</span>
+              </div>
+            </div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-row">
+              <i class="ti ti-home"></i>
+              <div class="detail-key">Layanan</div>
+              <div class="detail-val" id="det-layanan">
+                Bersih Rumah Regular
+              </div>
+            </div>
+            <div class="detail-row">
+              <i class="ti ti-map-pin"></i>
+              <div class="detail-key">Lokasi</div>
+              <div class="detail-val">Jl. Malioboro No. 45</div>
+            </div>
+            <div class="detail-row">
+              <i class="ti ti-calendar"></i>
+              <div class="detail-key">Tanggal</div>
+              <div class="detail-val" id="det-tanggal">Rabu, 11 Juni 2025</div>
+            </div>
+            <div class="detail-row">
+              <i class="ti ti-clock"></i>
+              <div class="detail-key">Waktu</div>
+              <div class="detail-val" id="det-waktu">10:00 – 13:00 WIB</div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="btn-primary"
+          style="margin-bottom: 16px"
+          onclick="goTo('s-pay')"
+        >
+          Konfirmasi & Bayar <i class="ti ti-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- ══ SCREEN 5: BAYAR ══ -->
+      <div class="screen" id="s-pay">
+        <div class="s-header">
+          <div class="back-btn" onclick="goBack()">
+            <i
+              class="ti ti-arrow-left"
+              style="color: #fff; font-size: 18px"
+            ></i>
+          </div>
+          <div>
+            <div class="s-header-title">Konfirmasi & Bayar</div>
+            <div class="s-header-sub">Pilih metode pembayaran</div>
+          </div>
+        </div>
+        <div class="pay-section">
+          <div class="pay-lbl">Metode Pembayaran</div>
+          <div class="pay-methods">
+            <div class="pay-method selected" onclick="selectPay(this)">
+              <div class="pay-icon"><i class="ti ti-wallet"></i></div>
+              <div>
+                <div class="pay-name">GoPay / OVO</div>
+                <div class="pay-desc">Saldo Rp 320.000</div>
+              </div>
+              <div class="radio checked"></div>
+            </div>
+            <div class="pay-method" onclick="selectPay(this)">
+              <div class="pay-icon"><i class="ti ti-credit-card"></i></div>
+              <div>
+                <div class="pay-name">Transfer Bank</div>
+                <div class="pay-desc">BCA, Mandiri, BNI</div>
+              </div>
+              <div class="radio"></div>
+            </div>
+            <div class="pay-method" onclick="selectPay(this)">
+              <div class="pay-icon"><i class="ti ti-cash"></i></div>
+              <div>
+                <div class="pay-name">Bayar Tunai</div>
+                <div class="pay-desc">Bayar saat petugas tiba</div>
+              </div>
+              <div class="radio"></div>
+            </div>
+            <div class="pay-method" onclick="selectPay(this)">
+              <div class="pay-icon"><i class="ti ti-qrcode"></i></div>
+              <div>
+                <div class="pay-name">QRIS</div>
+                <div class="pay-desc">Scan QR untuk bayar</div>
+              </div>
+              <div class="radio"></div>
+            </div>
+          </div>
+        </div>
+        <div class="summary-mini">
+          <div>
+            <div class="sum-lbl">Total Pembayaran</div>
+            <div class="sum-total" id="pay-total">Rp 195.000</div>
+          </div>
+          <i
+            class="ti ti-shield-check"
+            style="color: var(--blue); font-size: 28px"
+          ></i>
+        </div>
+        <button
+          class="btn-primary"
+          style="margin: 14px 14px 16px"
+          onclick="goTo('s-matching')"
+        >
+          <i class="ti ti-lock"></i> Bayar Sekarang
+        </button>
+      </div>
+
+      <!-- ══ SCREEN 6: MATCHING ══ -->
+      <div class="screen" id="s-matching">
+        <div class="s-header">
+          <div><div class="s-header-title">Mencari Mitra Terbaik</div></div>
+        </div>
+        <div class="matching-wrap">
+          <div class="matching-anim">
+            <div class="spin-ring" id="spin-ring"></div>
+            <i class="ti ti-user-search"></i>
+          </div>
+          <div class="matching-title">Mencarikan Mitra...</div>
+          <div class="matching-sub">
+            Sistem kami mencari mitra terverifikasi terbaik di area Anda
+          </div>
+          <div class="mitra-steps" id="mitra-steps">
+            <div class="step-row">
+              <div class="step-dot inactive" id="dot0"></div>
+              <div class="step-txt inactive" id="txt0">
+                ✓ Pesanan dikonfirmasi
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot inactive" id="dot1"></div>
+              <div class="step-txt inactive" id="txt1">
+                ✓ Pembayaran diterima
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot inactive" id="dot2"></div>
+              <div class="step-txt inactive" id="txt2">
+                🔍 Mencari mitra terdekat
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot inactive" id="dot3"></div>
+              <div class="step-txt inactive" id="txt3">
+                Mengirim notifikasi ke mitra
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot inactive" id="dot4"></div>
+              <div class="step-txt inactive" id="txt4">Mitra dikonfirmasi</div>
+            </div>
+          </div>
+          <div class="mitra-found" id="mitra-found" style="display: none">
+            <div class="mitra-avatar">SR</div>
+            <div>
+              <div class="mitra-name">Sari Rahayu</div>
+              <div class="mitra-rating">⭐ 4.9 • 324 ulasan</div>
+              <div class="mitra-badge-pill">✓ Terverifikasi Go-Clean</div>
+            </div>
+            <i
+              class="ti ti-check-circle"
+              style="color: #fff; font-size: 28px; margin-left: auto"
+            ></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ SCREEN 7: TRACKING ══ -->
+      <div class="screen" id="s-tracking">
+        <div class="track-map">
+          <div class="map-grid-bg"></div>
+          <div class="map-pin curr"><i class="ti ti-user"></i></div>
+          <div class="route-line"></div>
+          <div class="map-pin dest"><i class="ti ti-home"></i></div>
+          <div class="eta-badge">
+            <i class="ti ti-clock" style="font-size: 12px"></i> 5 menit lagi
+          </div>
+        </div>
+        <div class="worker-bar">
+          <div class="worker-card">
+            <div class="worker-avatar">SR</div>
+            <div>
+              <div class="worker-name">Sari Rahayu</div>
+              <div class="worker-role">Mitra Cleaning Go-Clean</div>
+              <div class="worker-rating">
+                <i class="ti ti-star-filled"></i> 4.9 • 324 pekerjaan
+              </div>
+            </div>
+            <div class="worker-actions">
+              <div class="action-btn"><i class="ti ti-message"></i></div>
+              <div class="action-btn call"><i class="ti ti-phone"></i></div>
+            </div>
+          </div>
+          <div class="prog-title">Status Layanan</div>
+          <div class="prog-track">
+            <div class="prog-fill" id="prog-fill" style="width: 65%"></div>
+          </div>
+          <div class="prog-steps">
+            <div class="prog-step done">Tiba</div>
+            <div class="prog-step done">Mulai</div>
+            <div class="prog-step done">Berlangsung</div>
+            <div class="prog-step">Selesai</div>
+          </div>
+          <div class="stats-row">
+            <div class="stat-box">
+              <div class="stat-lbl">Mulai</div>
+              <div class="stat-val">10:05</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-lbl">Estimasi Selesai</div>
+              <div class="stat-val">13:05</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-lbl">Sisa</div>
+              <div class="stat-val" id="sisa-waktu">1j 45m</div>
+            </div>
+          </div>
+          <button
+            class="btn-primary btn-green"
+            style="
+              margin-top: 14px;
+              margin-left: 0;
+              margin-right: 0;
+              width: 100%;
+            "
+            onclick="goTo('s-rating')"
+          >
+            <i class="ti ti-check"></i> Layanan Selesai
+          </button>
+        </div>
+      </div>
+
+      <!-- ══ SCREEN 8: RATING ══ -->
+      <div class="screen" id="s-rating">
+        <div class="s-header">
+          <div><div class="s-header-title">Layanan Selesai!</div></div>
+        </div>
+        <div class="rating-wrap">
+          <div class="complete-wrap">
+            <div class="complete-icon"><i class="ti ti-check"></i></div>
+            <div class="complete-title">Layanan Selesai!</div>
+            <div class="complete-sub">Bersih Rumah oleh Sari Rahayu</div>
+          </div>
+          <div style="text-align: center; margin-bottom: 16px">
+            <div
+              style="
+                font-size: 14px;
+                font-weight: 700;
+                color: var(--gray-700);
+                margin-bottom: 12px;
+              "
+            >
+              Bagaimana layanannya?
+            </div>
+            <div class="stars-row" id="stars-row">
+              <span class="star" onclick="setStar(1)">★</span>
+              <span class="star" onclick="setStar(2)">★</span>
+              <span class="star" onclick="setStar(3)">★</span>
+              <span class="star" onclick="setStar(4)">★</span>
+              <span class="star empty" onclick="setStar(5)">★</span>
+            </div>
+          </div>
+          <div style="margin-bottom: 12px">
+            <div
+              style="
+                font-size: 14px;
+                font-weight: 700;
+                color: var(--gray-700);
+                margin-bottom: 8px;
+              "
+            >
+              Pilih tag ulasan
+            </div>
+            <div class="quick-tags">
+              <div class="qtag" onclick="toggleTag(this)">Tepat Waktu</div>
+              <div class="qtag" onclick="toggleTag(this)">Bersih & Rapi</div>
+              <div class="qtag" onclick="toggleTag(this)">Ramah</div>
+              <div class="qtag inactive" onclick="toggleTag(this)">Teliti</div>
+              <div class="qtag inactive" onclick="toggleTag(this)">
+                Profesional
+              </div>
+            </div>
+          </div>
+          <textarea
+            class="review-input"
+            placeholder="Tulis ulasan Anda di sini... (opsional)"
+          ></textarea>
+          <button
+            class="btn-primary"
+            style="
+              margin: 12px 0 0;
+              width: 100%;
+              margin-left: 0;
+              margin-right: 0;
+            "
+            onclick="goTo('s-done')"
+          >
+            <i class="ti ti-send"></i> Kirim Ulasan
+          </button>
+        </div>
+        <div class="trust-bar">
+          <div class="trust-item">
+            <i class="ti ti-shield-check"></i><span>Aman</span>
+          </div>
+          <div class="trust-item">
+            <i class="ti ti-users-check"></i><span>Terverifikasi</span>
+          </div>
+          <div class="trust-item">
+            <i class="ti ti-clock"></i><span>Tepat Waktu</span>
+          </div>
+          <div class="trust-item">
+            <i class="ti ti-lock"></i><span>Terpercaya</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ DONE ══ -->
+      <div class="screen" id="s-done">
+        <div class="done-wrap">
+          <div class="done-icon"><i class="ti ti-sparkles"></i></div>
+          <div
+            style="
+              font-size: 22px;
+              font-weight: 900;
+              color: var(--gray-700);
+              margin-bottom: 8px;
+            "
+          >
+            Terima Kasih!
+          </div>
+          <div
+            style="font-size: 14px; color: var(--gray-400); margin-bottom: 32px"
+          >
+            Ulasan Anda telah terkirim. Sampai jumpa di pemesanan berikutnya! 😊
+          </div>
+          <button
+            class="btn-primary"
+            style="width: 100%; margin-left: 0; margin-right: 0"
+            onclick="resetApp()"
+          >
+            <i class="ti ti-home"></i> Kembali ke Beranda
+          </button>
+        </div>
+      </div>
+
+      <!-- ══ ORDERS ══ -->
+      <div class="screen" id="s-orders">
+        <div class="s-header">
+          <div><div class="s-header-title">Pesanan Saya</div></div>
+        </div>
+        <div style="padding: 14px; flex: 1">
+          <div class="order-card">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 8px;
+              "
+            >
+              <div
+                style="
+                  font-size: 14px;
+                  font-weight: 800;
+                  color: var(--gray-700);
+                "
+              >
+                Bersih Rumah Regular
+              </div>
+              <div
+                class="status-pill"
+                style="color: var(--green); background: #dcfce7"
+              >
+                Selesai
+              </div>
+            </div>
+            <div style="font-size: 12px; color: var(--gray-400)">
+              5 Jun 2025
+            </div>
+            <div
+              style="
+                font-size: 15px;
+                font-weight: 900;
+                color: var(--blue);
+                margin-top: 4px;
+              "
+            >
+              Rp 195.000
+            </div>
+          </div>
+          <div class="order-card">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 8px;
+              "
+            >
+              <div
+                style="
+                  font-size: 14px;
+                  font-weight: 800;
+                  color: var(--gray-700);
+                "
+              >
+                Cuci Sofa & Karpet
+              </div>
+              <div
+                class="status-pill"
+                style="color: var(--red); background: #fee2e2"
+              >
+                Dibatalkan
+              </div>
+            </div>
+            <div style="font-size: 12px; color: var(--gray-400)">
+              1 Jun 2025
+            </div>
+            <div
+              style="
+                font-size: 15px;
+                font-weight: 900;
+                color: var(--blue);
+                margin-top: 4px;
+              "
+            >
+              Rp 200.000
+            </div>
+          </div>
+        </div>
+        <nav class="nav-bar">
+          <div class="nav-item" onclick="goTo('s-home')">
+            <i class="ti ti-home-2"></i><span>Beranda</span>
+          </div>
+          <div class="nav-item active" onclick="goTo('s-orders')">
+            <i class="ti ti-clipboard-list"></i><span>Pesanan</span>
+          </div>
+          <div class="nav-center">
+            <div class="nav-fab" onclick="goTo('s-service')">
+              <i class="ti ti-plus"></i>
+            </div>
+          </div>
+          <div class="nav-item" onclick="goTo('s-chat')">
+            <i class="ti ti-message"></i><span>Chat</span>
+          </div>
+          <div class="nav-item" onclick="goTo('s-profile')">
+            <i class="ti ti-user"></i><span>Profil</span>
+          </div>
+        </nav>
+      </div>
+
+      <!-- ══ PROFILE ══ -->
+      <div class="screen" id="s-profile">
+        <div class="profile-header">
+          <div class="avatar-lg">BS</div>
+          <div style="font-size: 18px; font-weight: 800">Budi Santoso</div>
+          <div style="font-size: 13px; opacity: 0.8">budi@email.com</div>
+        </div>
+        <div style="flex: 1; padding: 14px; margin-top: -20px">
+          <div class="menu-list">
+            <div class="menu-item" onclick="goTo('s-alamat')">
+              <i class="ti ti-map-pin"></i
+              ><span class="menu-item-lbl">Alamat Tersimpan</span
+              ><i
+                class="ti ti-chevron-right"
+                style="
+                  color: var(--gray-400);
+                  font-size: 16px;
+                  margin-left: auto;
+                "
+              ></i>
+            </div>
+            <div class="menu-item" onclick="goTo('s-payment-methods')">
+              <i class="ti ti-credit-card"></i
+              ><span class="menu-item-lbl">Metode Pembayaran</span
+              ><i
+                class="ti ti-chevron-right"
+                style="
+                  color: var(--gray-400);
+                  font-size: 16px;
+                  margin-left: auto;
+                "
+              ></i>
+            </div>
+            <div class="menu-item" onclick="goTo('s-orders')">
+              <i class="ti ti-history"></i
+              ><span class="menu-item-lbl">Riwayat Pesanan</span
+              ><i
+                class="ti ti-chevron-right"
+                style="
+                  color: var(--gray-400);
+                  font-size: 16px;
+                  margin-left: auto;
+                "
+              ></i>
+            </div>
+            <div class="menu-item" onclick="goTo('s-notif')">
+              <i class="ti ti-bell"></i
+              ><span class="menu-item-lbl">Notifikasi</span
+              ><i
+                class="ti ti-chevron-right"
+                style="
+                  color: var(--gray-400);
+                  font-size: 16px;
+                  margin-left: auto;
+                "
+              ></i>
+            </div>
+            <div class="menu-item" onclick="goTo('s-bantuan')">
+              <i class="ti ti-help"></i
+              ><span class="menu-item-lbl">Bantuan</span
+              ><i
+                class="ti ti-chevron-right"
+                style="
+                  color: var(--gray-400);
+                  font-size: 16px;
+                  margin-left: auto;
+                "
+              ></i>
+            </div>
+            <div class="menu-item danger" onclick="resetApp()">
+              <i class="ti ti-logout"></i
+              ><span class="menu-item-lbl">Keluar</span>
+            </div>
+          </div>
+        </div>
+        <nav class="nav-bar">
+          <div class="nav-item" onclick="goTo('s-home')">
+            <i class="ti ti-home-2"></i><span>Beranda</span>
+          </div>
+          <div class="nav-item" onclick="goTo('s-orders')">
+            <i class="ti ti-clipboard-list"></i><span>Pesanan</span>
+          </div>
+          <div class="nav-center">
+            <div class="nav-fab" onclick="goTo('s-service')">
+              <i class="ti ti-plus"></i>
+            </div>
+          </div>
+          <div class="nav-item" onclick="goTo('s-chat')">
+            <i class="ti ti-message"></i><span>Chat</span>
+          </div>
+          <div class="nav-item active" onclick="goTo('s-profile')">
+            <i class="ti ti-user"></i><span>Profil</span>
+          </div>
+        </nav>
+      </div>
+
+      <!-- ══ CHAT ══ -->
+      <div class="screen" id="s-chat">
+        <div class="s-header">
+          <div class="back-btn" onclick="goTo('s-home')">
+            <i
+              class="ti ti-arrow-left"
+              style="color: #fff; font-size: 18px"
+            ></i>
+          </div>
+          <div>
+            <div class="s-header-title">Chat Support</div>
+            <div class="s-header-sub">Kami siap membantu Anda</div>
+          </div>
+        </div>
+        <div class="chat-list">
+          <div class="chat-item" onclick="goTo('s-chat-detail')">
+            <div class="chat-avatar" style="background: var(--blue)">
+              <i class="ti ti-headset" style="color: #fff; font-size: 20px"></i>
+            </div>
+            <div class="chat-info">
+              <div class="chat-name">CS Go-Clean</div>
+              <div class="chat-preview">Halo! Ada yang bisa kami bantu?</div>
+            </div>
+            <div class="chat-meta">
+              <div class="chat-time">10:30</div>
+              <div class="chat-badge">1</div>
+            </div>
+          </div>
+          <div class="chat-item" onclick="goTo('s-chat-detail')">
+            <div
+              class="chat-avatar"
+              style="
+                background: var(--blue-bg);
+                color: var(--blue);
+                font-weight: 800;
+                font-size: 16px;
+              "
+            >
+              SR
+            </div>
+            <div class="chat-info">
+              <div class="chat-name">Sari Rahayu (Mitra)</div>
+              <div class="chat-preview">
+                Saya sudah dalam perjalanan ke lokasi
+              </div>
+            </div>
+            <div class="chat-meta"><div class="chat-time">Kemarin</div></div>
+          </div>
+        </div>
+        <nav class="nav-bar">
+          <div class="nav-item" onclick="goTo('s-home')">
+            <i class="ti ti-home-2"></i><span>Beranda</span>
+          </div>
+          <div class="nav-item" onclick="goTo('s-orders')">
+            <i class="ti ti-clipboard-list"></i><span>Pesanan</span>
+          </div>
+          <div class="nav-center">
+            <div class="nav-fab" onclick="goTo('s-service')">
+              <i class="ti ti-plus"></i>
+            </div>
+          </div>
+          <div class="nav-item active" onclick="goTo('s-chat')">
+            <i class="ti ti-message"></i><span>Chat</span>
+          </div>
+          <div class="nav-item" onclick="goTo('s-profile')">
+            <i class="ti ti-user"></i><span>Profil</span>
+          </div>
+        </nav>
+      </div>
+
+      <!-- ══ CHAT DETAIL ══ -->
+      <div class="screen" id="s-chat-detail">
+        <div class="s-header">
+          <div class="back-btn" onclick="goBack()">
+            <i
+              class="ti ti-arrow-left"
+              style="color: #fff; font-size: 18px"
+            ></i>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; flex: 1">
+            <div class="chat-avatar-sm" style="background: var(--blue)">
+              <i class="ti ti-headset" style="color: #fff; font-size: 16px"></i>
+            </div>
+            <div>
+              <div class="s-header-title">CS Go-Clean</div>
+              <div class="s-header-sub">● Online</div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+          <div class="msg-bubble incoming">
+            Halo! Selamat datang di Go-Clean. Ada yang bisa kami bantu? 😊
+          </div>
+          <div class="msg-bubble incoming">
+            Kami siap membantu Anda 24/7 untuk pertanyaan seputar layanan
+            cleaning.
+          </div>
+          <div class="msg-bubble outgoing">
+            Halo, saya mau tanya soal jadwal pesanan saya
+          </div>
+          <div class="msg-bubble incoming">
+            Tentu! Boleh saya tahu nomor pesanan Anda?
+          </div>
+        </div>
+        <div class="chat-input-bar">
+          <input
+            class="chat-input"
+            id="chat-input-field"
+            type="text"
+            placeholder="Ketik pesan..."
+            onkeydown="if (event.key === 'Enter') sendMsg();"
+          />
+          <div class="chat-send-btn" onclick="sendMsg()">
+            <i class="ti ti-send" style="color: #fff; font-size: 18px"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ ALAMAT TERSIMPAN ══ -->
+      <div class="screen" id="s-alamat">
+        <div class="s-header">
+          <div class="back-btn" onclick="goBack()">
+            <i
+              class="ti ti-arrow-left"
+              style="color: #fff; font-size: 18px"
+            ></i>
+          </div>
+          <div>
+            <div class="s-header-title">Alamat Tersimpan</div>
+            <div class="s-header-sub">Kelola alamat Anda</div>
+          </div>
+        </div>
+        <div style="padding: 14px; flex: 1">
+          <div class="addr-card active-addr">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+              "
+            >
+              <div style="display: flex; gap: 10px; align-items: flex-start">
+                <i
+                  class="ti ti-home"
+                  style="color: var(--blue); font-size: 20px; margin-top: 2px"
+                ></i>
+                <div>
+                  <div
+                    style="
+                      font-size: 13px;
+                      font-weight: 800;
+                      color: var(--blue);
+                      margin-bottom: 2px;
+                    "
+                  >
+                    🏠 Rumah
+                  </div>
+                  <div
+                    style="
+                      font-size: 14px;
+                      font-weight: 700;
+                      color: var(--gray-700);
+                    "
+                  >
+                    Jl. Malioboro No. 45
+                  </div>
+                  <div style="font-size: 12px; color: var(--gray-400)">
+                    Yogyakarta, DIY 55271
+                  </div>
+                </div>
+              </div>
+              <div class="addr-badge">Utama</div>
+            </div>
+          </div>
+          <div class="addr-card">
+            <div style="display: flex; gap: 10px; align-items: flex-start">
+              <i
+                class="ti ti-building"
+                style="color: var(--gray-400); font-size: 20px; margin-top: 2px"
+              ></i>
+              <div>
+                <div
+                  style="
+                    font-size: 13px;
+                    font-weight: 800;
+                    color: var(--gray-400);
+                    margin-bottom: 2px;
+                  "
+                >
+                  🏢 Kantor
+                </div>
+                <div
+                  style="
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: var(--gray-700);
+                  "
+                >
+                  Jl. Sudirman No. 12
+                </div>
+                <div style="font-size: 12px; color: var(--gray-400)">
+                  Yogyakarta, DIY 55233
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="btn-primary"
+            style="margin-top: 16px"
+            onclick="alert('Fitur tambah alamat segera hadir!')"
+          >
+            <i class="ti ti-plus"></i> Tambah Alamat Baru
+          </button>
+        </div>
+      </div>
+
+      <!-- ══ METODE PEMBAYARAN ══ -->
+      <div class="screen" id="s-payment-methods">
+        <div class="s-header">
+          <div class="back-btn" onclick="goBack()">
+            <i
+              class="ti ti-arrow-left"
+              style="color: #fff; font-size: 18px"
+            ></i>
+          </div>
+          <div>
+            <div class="s-header-title">Metode Pembayaran</div>
+            <div class="s-header-sub">Dompet & kartu tersimpan</div>
+          </div>
+        </div>
+        <div style="padding: 14px; flex: 1">
+          <div
+            style="
+              font-size: 13px;
+              font-weight: 800;
+              color: var(--gray-400);
+              margin-bottom: 10px;
+              letter-spacing: 0.5px;
+            "
+          >
+            DOMPET DIGITAL
+          </div>
+          <div class="pay-saved-card">
+            <div class="pay-icon" style="background: var(--blue)">
+              <i class="ti ti-wallet" style="color: #fff"></i>
+            </div>
+            <div style="flex: 1">
+              <div
+                style="
+                  font-size: 14px;
+                  font-weight: 800;
+                  color: var(--gray-700);
+                "
+              >
+                GoPay
+              </div>
+              <div style="font-size: 12px; color: var(--gray-400)">
+                Saldo: Rp 320.000
+              </div>
+            </div>
+            <div class="radio checked"></div>
+          </div>
+          <div class="pay-saved-card">
+            <div class="pay-icon"><i class="ti ti-device-mobile"></i></div>
+            <div style="flex: 1">
+              <div
+                style="
+                  font-size: 14px;
+                  font-weight: 800;
+                  color: var(--gray-700);
+                "
+              >
+                OVO
+              </div>
+              <div style="font-size: 12px; color: var(--gray-400)">
+                Saldo: Rp 50.000
+              </div>
+            </div>
+            <div class="radio"></div>
+          </div>
+          <div
+            style="
+              font-size: 13px;
+              font-weight: 800;
+              color: var(--gray-400);
+              margin: 16px 0 10px;
+              letter-spacing: 0.5px;
+            "
+          >
+            REKENING BANK
+          </div>
+          <div class="pay-saved-card">
+            <div class="pay-icon"><i class="ti ti-credit-card"></i></div>
+            <div style="flex: 1">
+              <div
+                style="
+                  font-size: 14px;
+                  font-weight: 800;
+                  color: var(--gray-700);
+                "
+              >
+                BCA ••••3421
+              </div>
+              <div style="font-size: 12px; color: var(--gray-400)">
+                a.n. Budi Santoso
+              </div>
+            </div>
+            <div class="radio"></div>
+          </div>
+          <button
+            class="btn-primary"
+            style="margin-top: 16px"
+            onclick="alert('Fitur tambah kartu segera hadir!')"
+          >
+            <i class="ti ti-plus"></i> Tambah Metode Baru
+          </button>
+        </div>
+      </div>
+
+      <!-- ══ NOTIFIKASI ══ -->
+      <div class="screen" id="s-notif">
+        <div class="s-header">
+          <div class="back-btn" onclick="goBack()">
+            <i
+              class="ti ti-arrow-left"
+              style="color: #fff; font-size: 18px"
+            ></i>
+          </div>
+          <div>
+            <div class="s-header-title">Notifikasi</div>
+            <div class="s-header-sub">Semua pemberitahuan</div>
+          </div>
+        </div>
+        <div style="padding: 14px; flex: 1; overflow-y: auto">
+          <div class="notif-item unread">
+            <div class="notif-icon" style="background: var(--blue-bg)">
+              <i class="ti ti-check-circle" style="color: var(--blue)"></i>
+            </div>
+            <div style="flex: 1">
+              <div class="notif-title">Pesanan Selesai</div>
+              <div class="notif-body">
+                Layanan Bersih Rumah oleh Sari Rahayu telah selesai. Berikan
+                ulasan Anda!
+              </div>
+              <div class="notif-time">5 Jun 2025 • 13:05</div>
+            </div>
+          </div>
+          <div class="notif-item unread">
+            <div class="notif-icon" style="background: #fef9c3">
+              <i class="ti ti-star" style="color: var(--orange)"></i>
+            </div>
+            <div style="flex: 1">
+              <div class="notif-title">Promo Spesial!</div>
+              <div class="notif-body">
+                Dapatkan diskon 30% untuk Cuci Sofa + Karpet minggu ini. Jangan
+                lewatkan!
+              </div>
+              <div class="notif-time">4 Jun 2025 • 09:00</div>
+            </div>
+          </div>
+          <div class="notif-item">
+            <div class="notif-icon" style="background: #dcfce7">
+              <i class="ti ti-map-pin" style="color: var(--green)"></i>
+            </div>
+            <div style="flex: 1">
+              <div class="notif-title">Mitra Dalam Perjalanan</div>
+              <div class="notif-body">
+                Sari Rahayu sedang dalam perjalanan ke lokasi Anda. Estimasi 5
+                menit lagi.
+              </div>
+              <div class="notif-time">5 Jun 2025 • 09:55</div>
+            </div>
+          </div>
+          <div class="notif-item">
+            <div class="notif-icon" style="background: var(--blue-bg)">
+              <i class="ti ti-receipt" style="color: var(--blue)"></i>
+            </div>
+            <div style="flex: 1">
+              <div class="notif-title">Pembayaran Berhasil</div>
+              <div class="notif-body">
+                Pembayaran Rp 195.000 untuk pesanan #GC-2025-0605 telah
+                dikonfirmasi.
+              </div>
+              <div class="notif-time">5 Jun 2025 • 09:30</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ BANTUAN ══ -->
+      <div class="screen" id="s-bantuan">
+        <div class="s-header">
+          <div class="back-btn" onclick="goBack()">
+            <i
+              class="ti ti-arrow-left"
+              style="color: #fff; font-size: 18px"
+            ></i>
+          </div>
+          <div>
+            <div class="s-header-title">Bantuan</div>
+            <div class="s-header-sub">Pusat bantuan Go-Clean</div>
+          </div>
+        </div>
+        <div style="padding: 14px; flex: 1; overflow-y: auto">
+          <div
+            class="search-bar"
+            style="
+              margin-bottom: 16px;
+              background: var(--gray-100);
+              border: 1.5px solid var(--gray-200);
+            "
+          >
+            <i
+              class="ti ti-search"
+              style="color: var(--gray-400); font-size: 18px"
+            ></i>
+            <span style="color: var(--gray-400); font-size: 13px"
+              >Cari pertanyaan...</span
+            >
+          </div>
+          <div
+            style="
+              font-size: 13px;
+              font-weight: 800;
+              color: var(--gray-400);
+              margin-bottom: 10px;
+              letter-spacing: 0.5px;
+            "
+          >
+            PERTANYAAN UMUM
+          </div>
+          <div class="faq-item" onclick="this.classList.toggle('open')">
+            <div class="faq-q">
+              <span>Bagaimana cara memesan layanan?</span
+              ><i class="ti ti-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+              Pilih layanan yang Anda butuhkan dari halaman utama, tentukan
+              jadwal dan durasi, lalu konfirmasi pembayaran. Mitra kami akan
+              segera dikonfirmasi.
+            </div>
+          </div>
+          <div class="faq-item" onclick="this.classList.toggle('open')">
+            <div class="faq-q">
+              <span>Apakah mitra sudah terverifikasi?</span
+              ><i class="ti ti-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+              Ya! Semua mitra Go-Clean telah melalui proses seleksi ketat,
+              pelatihan, dan verifikasi identitas. Anda bisa melihat rating dan
+              ulasan masing-masing mitra.
+            </div>
+          </div>
+          <div class="faq-item" onclick="this.classList.toggle('open')">
+            <div class="faq-q">
+              <span>Bagaimana kebijakan pembatalan?</span
+              ><i class="ti ti-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+              Pembatalan gratis hingga 2 jam sebelum jadwal. Setelah itu
+              dikenakan biaya 20% dari total pesanan.
+            </div>
+          </div>
+          <div class="faq-item" onclick="this.classList.toggle('open')">
+            <div class="faq-q">
+              <span>Peralatan disediakan atau tidak?</span
+              ><i class="ti ti-chevron-down"></i>
+            </div>
+            <div class="faq-a">
+              Semua peralatan dan bahan pembersih sudah disediakan oleh mitra
+              Go-Clean. Anda tidak perlu menyiapkan apapun.
+            </div>
+          </div>
+          <div
+            style="
+              margin-top: 20px;
+              font-size: 13px;
+              font-weight: 800;
+              color: var(--gray-400);
+              margin-bottom: 10px;
+              letter-spacing: 0.5px;
+            "
+          >
+            HUBUNGI KAMI
+          </div>
+          <div class="help-contact" onclick="goTo('s-chat-detail')">
+            <div class="notif-icon" style="background: var(--blue-bg)">
+              <i class="ti ti-message" style="color: var(--blue)"></i>
+            </div>
+            <div>
+              <div
+                style="
+                  font-size: 14px;
+                  font-weight: 800;
+                  color: var(--gray-700);
+                "
+              >
+                Live Chat
+              </div>
+              <div style="font-size: 12px; color: var(--gray-400)">
+                Respon dalam hitungan menit
+              </div>
+            </div>
+            <i
+              class="ti ti-chevron-right"
+              style="color: var(--gray-400); margin-left: auto"
+            ></i>
+          </div>
+          <div class="help-contact">
+            <div class="notif-icon" style="background: #dcfce7">
+              <i class="ti ti-phone" style="color: var(--green)"></i>
+            </div>
+            <div>
+              <div
+                style="
+                  font-size: 14px;
+                  font-weight: 800;
+                  color: var(--gray-700);
+                "
+              >
+                Telepon
+              </div>
+              <div style="font-size: 12px; color: var(--gray-400)">
+                0800-123-4567 (Gratis)
+              </div>
+            </div>
+            <i
+              class="ti ti-chevron-right"
+              style="color: var(--gray-400); margin-left: auto"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ── STATE ──
+      const state = {
+        screen: "s-home",
+        history: [],
+        serviceIdx: 0,
+        durIdx: 1,
+        selDate: 11,
+        selTime: "10:00",
+      };
+
+      const SERVICES = [
+        { name: "Bersih Rumah Regular", base: 150000 },
+        { name: "Deep Cleaning", base: 350000 },
+        { name: "Cuci Sofa & Karpet", base: 200000 },
+      ];
+      const DURS = ["2 Jam", "3 Jam", "4 Jam", "Seharian"];
+      const DUR_HRS = [2, 3, 4, 8];
+
+      // ── CHAT ──
+      function sendMsg() {
+        const input = document.getElementById("chat-input-field");
+        const text = input.value.trim();
+        if (!text) return;
+        const msgs = document.getElementById("chat-messages");
+        const bubble = document.createElement("div");
+        bubble.className = "msg-bubble outgoing";
+        bubble.textContent = text;
+        msgs.appendChild(bubble);
+        input.value = "";
+        msgs.scrollTop = msgs.scrollHeight;
+        setTimeout(() => {
+          const reply = document.createElement("div");
+          reply.className = "msg-bubble incoming";
+          reply.textContent =
+            "Terima kasih pesannya! Tim kami akan segera menghubungi Anda. 😊";
+          msgs.appendChild(reply);
+          msgs.scrollTop = msgs.scrollHeight;
+        }, 1000);
+      }
+
+      // ── NAVIGATION ──
+      function goTo(id, isBack) {
+        const cur = document.getElementById(state.screen);
+        const next = document.getElementById(id);
+        if (!next || state.screen === id) return;
+
+        if (!isBack) state.history.push(state.screen);
+
+        cur.classList.remove("active");
+        next.style.animation = isBack
+          ? "fadeInLeft 0.25s ease"
+          : "fadeIn 0.25s ease";
+        next.classList.add("active");
+        state.screen = id;
+
+        if (id === "s-matching") startMatching();
+        if (id === "s-tracking") startTracking();
+        if (id === "s-estimate") updateEstimate();
+        if (id === "s-pay") updatePayTotal();
+      }
+
+      function goBack() {
+        if (state.history.length === 0) return;
+        const prev = state.history.pop();
+        goTo(prev, true);
+      }
+
+      function resetApp() {
+        state.history = [];
+        state.serviceIdx = 0;
+        state.durIdx = 1;
+        state.selDate = 11;
+        state.selTime = "10:00";
+        goTo("s-home");
+      }
+
+      // ── SERVICE SELECTION ──
+      function selectService(el, idx) {
+        state.serviceIdx = idx;
+        document.querySelectorAll("#s-service .svc-card").forEach((c, i) => {
+          const isSel = i === idx;
+          c.classList.toggle("selected", isSel);
+          const icon = c.querySelector(".svc-icon-big");
+          const check = c.querySelector(".check-circle, .check-empty");
+          if (isSel) {
+            icon.style.background = "var(--blue)";
+            icon.querySelector("i").style.color = "#fff";
+            check.className = "check-circle";
+            check.innerHTML = '<i class="ti ti-check"></i>';
+          } else {
+            icon.style.background = "";
+            icon.querySelector("i").style.color = "";
+            check.className = "check-empty";
+            check.innerHTML = "";
+          }
+        });
+      }
+
+      // ── TIME & DURATION ──
+      function selectTime(el) {
+        document
+          .querySelectorAll(".time-slot:not(.unavailable)")
+          .forEach((t) => t.classList.remove("selected"));
+        el.classList.add("selected");
+        state.selTime = el.textContent;
+      }
+
+      function selectDur(el, idx) {
+        state.durIdx = idx;
+        document
+          .querySelectorAll(".dur-chip")
+          .forEach((c, i) => c.classList.toggle("selected", i === idx));
+      }
+
+      // ── CALENDAR ──
+      function buildCalendar() {
+        const grid = document.getElementById("cal-grid");
+        grid.innerHTML = "";
+        const blanks = [null, null, null, null, null];
+        const days = [
+          ...blanks,
+          ...Array.from({ length: 22 }, (_, i) => i + 1),
+        ];
+        days.forEach((d) => {
+          const el = document.createElement("div");
+          if (d === null) {
+            grid.appendChild(el);
+            return;
+          }
+          el.className = "cal-day";
+          el.textContent = d;
+          if (d === 6) el.classList.add("today");
+          if (d === state.selDate) el.classList.add("selected");
+          el.onclick = () => {
+            state.selDate = d;
+            document.querySelectorAll(".cal-day").forEach((c) => {
+              c.classList.remove("selected");
+              if (parseInt(c.textContent) === d) c.classList.add("selected");
+            });
+          };
+          grid.appendChild(el);
+        });
+      }
+
+      // ── ESTIMATE ──
+      function updateEstimate() {
+        const svc = SERVICES[state.serviceIdx];
+        const hrs = DUR_HRS[state.durIdx];
+        const base = Math.round((svc.base * hrs) / 3);
+        const platform = 15000;
+        const disc = Math.round(base * 0.15);
+        const total = base + platform - disc;
+        const fmt = (n) => "Rp " + n.toLocaleString("id");
+
+        document.getElementById("est-svc-name").textContent =
+          svc.name + " • " + DURS[state.durIdx];
+        document.getElementById("est-total").textContent = fmt(total);
+        document.getElementById("est-row-svc").textContent =
+          svc.name + " (" + DURS[state.durIdx] + ")";
+        document.getElementById("est-row-base").textContent = fmt(base);
+        document.getElementById("est-row-disc").textContent = "- " + fmt(disc);
+        document.getElementById("est-row-total").textContent = fmt(total);
+        document.getElementById("det-layanan").textContent = svc.name;
+        document.getElementById("det-tanggal").textContent =
+          state.selDate + " Juni 2025";
+        document.getElementById("det-waktu").textContent =
+          state.selTime + " WIB";
+      }
+
+      function updatePayTotal() {
+        const svc = SERVICES[state.serviceIdx];
+        const hrs = DUR_HRS[state.durIdx];
+        const base = Math.round((svc.base * hrs) / 3);
+        const total = Math.round(base + 15000 - base * 0.15);
+        document.getElementById("pay-total").textContent =
+          "Rp " + total.toLocaleString("id");
+      }
+
+      // ── PAYMENT SELECTION ──
+      function selectPay(el) {
+        document.querySelectorAll(".pay-method").forEach((m) => {
+          const isSel = m === el;
+          m.classList.toggle("selected", isSel);
+          const radio = m.querySelector(".radio");
+          radio.classList.toggle("checked", isSel);
+          const icon = m.querySelector(".pay-icon");
+          icon.style.background = isSel ? "var(--blue)" : "";
+          icon.querySelector("i").style.color = isSel ? "#fff" : "";
+        });
+      }
+
+      // ── MATCHING ANIMATION ──
+      let matchTimer = null;
+      function startMatching() {
+        clearTimeout(matchTimer);
+        for (let i = 0; i < 5; i++) {
+          document.getElementById("dot" + i).className = "step-dot inactive";
+          document.getElementById("txt" + i).className = "step-txt inactive";
+        }
+        document.getElementById("mitra-found").style.display = "none";
+        document.getElementById("spin-ring").style.animation =
+          "spin 1s linear infinite";
+
+        let step = 0;
+        function tick() {
+          if (step < 5) {
+            document.getElementById("dot" + step).className = "step-dot";
+            document.getElementById("txt" + step).className = "step-txt";
+            step++;
+            matchTimer = setTimeout(tick, 900);
+          } else {
+            document.getElementById("spin-ring").style.animation = "none";
+            document.getElementById("mitra-found").style.display = "flex";
+            matchTimer = setTimeout(() => goTo("s-tracking"), 1800);
+          }
+        }
+        matchTimer = setTimeout(tick, 600);
+      }
+
+      // ── TRACKING ANIMATION ──
+      let trackTimer = null;
+      function startTracking() {
+        clearTimeout(trackTimer);
+        let prog = 40;
+        const fill = document.getElementById("prog-fill");
+        fill.style.width = prog + "%";
+        function tick() {
+          if (prog < 65) {
+            prog += 0.5;
+            fill.style.width = prog + "%";
+            trackTimer = setTimeout(tick, 150);
+          }
+        }
+        trackTimer = setTimeout(tick, 500);
+      }
+
+      // ── RATING ──
+      let starCount = 4;
+      function setStar(n) {
+        starCount = n;
+        document.querySelectorAll("#stars-row .star").forEach((s, i) => {
+          s.classList.toggle("empty", i >= n);
+        });
+      }
+
+      function toggleTag(el) {
+        el.classList.toggle("inactive");
+      }
+
+      // ── INIT ──
+      buildCalendar();
+    </script>
+  </body>
+</html>
